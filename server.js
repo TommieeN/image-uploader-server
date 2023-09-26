@@ -23,6 +23,7 @@ app.post("/upload", upload.single("image"), (req, res) => {
   const imageUrl = `/uploads/${req.file.filename}`;
   res.json({ imageUrl });
 });
+
 // Serve uploaded images from the 'uploads' directory
 app.use("/uploads", express.static("uploads"));
 
